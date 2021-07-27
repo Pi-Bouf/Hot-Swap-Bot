@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "target": "ES2016",
+    "module": "commonjs",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "sourceMap": true,
+    "noEmitHelpers": false,
+    "moduleResolution": "node",
+    "paths": {
+    },
+    "baseUrl": "./"
+  }
+}
