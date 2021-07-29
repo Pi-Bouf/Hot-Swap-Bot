@@ -13,8 +13,8 @@
           <div class="value">23%</div>
           <progress-bar color="#233984" :percent="(parseInt(Math.random() * 100)).toString()"></progress-bar>
         </div>
-        <div class="price-change">+0.7%</div>
-        <div class="wbnb-value">0.13</div>
+        <div class="price-change">+{{ (Math.random() * 200).toFixed(3)}}%</div>
+        <div class="wbnb-value">{{ (Math.random() * 5).toFixed(6) }}</div>
       </div>
       <div class="entry">
         <div class="token"><icon icon="la-angle-right" size="22"></icon> <span>Sponge</span></div>
@@ -22,8 +22,8 @@
           <div class="value">125%</div>
           <progress-bar color="#D7F85B" :percent="(parseInt(Math.random() * 100)).toString()"></progress-bar>
         </div>
-        <div class="price-change">+0.7%</div>
-        <div class="wbnb-value">0.13</div>
+        <div class="price-change">+{{ (Math.random() * 200).toFixed(3)}}%</div>
+        <div class="wbnb-value">{{ (Math.random() * 5).toFixed(6) }}</div>
       </div>
       <div class="entry">
         <div class="token"><icon icon="la-angle-right" size="22"></icon> <span>Steam</span></div>
@@ -31,8 +31,8 @@
           <div class="value">23%</div>
           <progress-bar color="#015E5F" :percent="(parseInt(Math.random() * 100)).toString()"></progress-bar>
         </div>
-        <div class="price-change">+0.7%</div>
-        <div class="wbnb-value">0.13</div>
+        <div class="price-change">+{{ (Math.random() * 200).toFixed(3)}}%</div>
+        <div class="wbnb-value">{{ (Math.random() * 5).toFixed(6) }}</div>
       </div>
       <div class="entry">
         <div class="token"><icon icon="la-angle-right" size="22"></icon> <span>Rich</span></div>
@@ -40,8 +40,8 @@
           <div class="value">3%</div>
           <progress-bar color="#C4B8FF" :percent="(parseInt(Math.random() * 100)).toString()"></progress-bar>
         </div>
-        <div class="price-change">+0.7%</div>
-        <div class="wbnb-value">0.13</div>
+        <div class="price-change">+{{ (Math.random() * 200).toFixed(3)}}%</div>
+        <div class="wbnb-value">{{ (Math.random() * 5).toFixed(6) }}</div>
       </div>
       <div class="entry">
         <div class="token"><icon icon="la-angle-right" size="22"></icon> <span>Alpaca</span></div>
@@ -49,8 +49,8 @@
           <div class="value">12.78%</div>
           <progress-bar color="#36D577" :percent="(parseInt(Math.random() * 100)).toString()"></progress-bar>
         </div>
-        <div class="price-change">+0.7%</div>
-        <div class="wbnb-value">0.13</div>
+        <div class="price-change">+{{ (Math.random() * 200).toFixed(3)}}%</div>
+        <div class="wbnb-value">{{ (Math.random() * 5).toFixed(6) }}</div>
       </div>
       <div class="entry">
         <div class="token"><icon icon="la-angle-right" size="22"></icon> <span>Soak</span></div>
@@ -58,8 +58,8 @@
           <div class="value">345.78%</div>
           <progress-bar color="#FEEF5E" :percent="(parseInt(Math.random() * 100)).toString()"></progress-bar>
         </div>
-        <div class="price-change">+0.7%</div>
-        <div class="wbnb-value">0.13</div>
+        <div class="price-change">+{{ (Math.random() * 200).toFixed(3)}}%</div>
+        <div class="wbnb-value">{{ (Math.random() * 5).toFixed(6) }}</div>
       </div>
       <div class="entry">
         <div class="token"><icon icon="la-angle-right" size="22"></icon> <span>SUPRA</span></div>
@@ -67,8 +67,8 @@
           <div class="value">112.23%</div>
           <progress-bar color="#DBDBDB" :percent="(parseInt(Math.random() * 100)).toString()"></progress-bar>
         </div>
-        <div class="price-change">+0.7%</div>
-        <div class="wbnb-value">0.13</div>
+        <div class="price-change">+{{ (Math.random() * 200).toFixed(3)}}%</div>
+        <div class="wbnb-value">{{ (Math.random() * 5).toFixed(6) }}</div>
       </div>
       <div class="entry">
         <div class="token"><icon icon="la-angle-right" size="22"></icon> <span>DAI</span></div>
@@ -76,8 +76,8 @@
           <div class="value">12.98%</div>
           <progress-bar color="#209D9E" :percent="(parseInt(Math.random() * 100)).toString()"></progress-bar>
         </div>
-        <div class="price-change">+0.7%</div>
-        <div class="wbnb-value">0.13</div>
+        <div class="price-change">+{{ (Math.random() * 200).toFixed(3)}}%</div>
+        <div class="wbnb-value">{{ (Math.random() * 5).toFixed(6) }}</div>
       </div>
     </div>
   </div>

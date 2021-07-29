@@ -5,8 +5,8 @@
         <icon icon="la-balance-scale" size="50"></icon>
       </div>
       <div class="content">
-        <div class="label">WBNB</div>
-        <div class="value">1123.948747</div>
+        <div class="label">Balance</div>
+        <div class="value">342.948747</div>
       </div>
     </div>
     <div class="delimiter"></div>
@@ -16,7 +16,7 @@
       </div>
       <div class="content">
         <div class="label">Dollar</div>
-        <div class="value">1123.948747</div>
+        <div class="value">18873.983</div>
       </div>
     </div>
     <div class="delimiter"></div>
@@ -26,7 +26,7 @@
       </div>
       <div class="content">
         <div class="label">WBNB</div>
-        <div class="value">1123.948747</div>
+        <div class="value">112.3</div>
       </div>
     </div>
   </div>
