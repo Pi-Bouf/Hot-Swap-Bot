@@ -32,7 +32,7 @@ export class Contracts {
         );
 
         this._erc = new Contract(
-            "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82", [
+            Configuration.TOKENS.CAKE, [
                 {
                     "constant": true,
                     "inputs": [{"name": "_owner", "type": "address"}],
@@ -48,7 +48,7 @@ export class Contracts {
 
     async getBalanceOf(address: string) {
         const tokenContract = new Contract(
-            "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82", [
+            Configuration.TOKENS.CAKE, [
                 {
                     "constant": true,
                     "inputs": [{"name": "_owner", "type": "address"}],
