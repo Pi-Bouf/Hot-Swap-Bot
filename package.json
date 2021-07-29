@@ -20,6 +20,8 @@
   "devDependencies": {
     "@types/chalk": "^2.2.0",
     "@vue/component-compiler-utils": "^3.2.2",
+    "chai": "^4.3.4",
+    "mocha": "^9.0.3",
     "parcel": "1.12.3",
     "sass": "^1.36.0",
     "ts-node": "^10.1.0",

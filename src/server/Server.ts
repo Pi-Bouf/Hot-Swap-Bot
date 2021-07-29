@@ -1,8 +1,6 @@
 import * as chalk from "chalk";
 import {Account} from "./ethers/Account";
 import {Contracts} from "./ethers/Contracts";
-import {formatEther, parseEther, parseUnits} from "ethers/lib/utils";
-import {Configuration} from "./conf";
 
 const tokens = {
     CAKE: "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
