@@ -11,6 +11,7 @@ export const Configuration: IConfiguration = {
     GAS_LIMIT: 450000,
     RPC: "https://bsc-dataseed.binance.org/", // Default RPC
     TOKENS: { // Token list (for the bot) --> Temporary ?
+        "BUSD": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
         "CAKE": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
     }
 }
