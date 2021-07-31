@@ -2,7 +2,7 @@ import * as chalk from 'chalk';
 import {IContracts} from '../ethers/interface/IContracts';
 import {IOrder} from './interface/IOrder';
 import {IToken} from '../ethers/interface/IToken';
-import {formatEther} from 'ethers/lib/utils';
+import {formatEther, formatUnits} from 'ethers/lib/utils';
 import {BigNumber} from 'ethers';
 
 export class TokenOrder implements IOrder {
@@ -66,20 +66,25 @@ export class TokenOrder implements IOrder {
         try {
             this.balance = await this.contracts.getTokenBalanceInWallet(this.address);
 
-            if (this.balance !== BigNumber.from(0)) {
-                this.balanceInWBNB = await this.contracts.getTokenPriceInWBNB(this.address, '1');
-                this.balanceInBUSD = await this.contracts.getWBNBPriceInBUSD('1');
+            if (this.balance.toString() !== "0") {
+                this.balanceInWBNB = await this.contracts.getTokenPriceInWBNB(this.address, formatUnits(this.balance, this.token.decimals));
+                this.balanceInBUSD = await this.contracts.getWBNBPriceInBUSD(formatEther(this.balanceInWBNB));
+
+                this.logInfo(`No balance for this token... [ ${formatEther(this.balance)} ${this.token.symbol} ] = [${formatEther(this.balanceInWBNB)} WBNB] = [${formatEther(this.balanceInBUSD)} BUSD]`);
             } else {
-                console.log("ZOB");
+                const balanceInWBNB = await this.contracts.getTokenPriceInWBNB(this.address, "1");
+                const balanceInBUSD = await this.contracts.getWBNBPriceInBUSD(formatEther(balanceInWBNB));
+
+                this.logInfo(`No balance for this token... [ 1 ${this.token.symbol} ] = [${formatEther(balanceInWBNB)} WBNB] = [${formatEther(balanceInBUSD)} BUSD]`);
             }
         } catch (e) {
             this.logError("Can't refresh all balances ! " + e);
         }
-
-        console.log(formatEther(this.balance), formatEther(this.balanceInWBNB), formatEther(this.balanceInBUSD));
     }
 
-
+    private logInfo(info: any) {
+        console.log(chalk.green(`[TokenOrder => ${this.address}] ${info}`));
+    }
 
     private logError(error: any) {
         console.log(chalk.red(`[TokenOrder => ${this.address}] ${error}`));
