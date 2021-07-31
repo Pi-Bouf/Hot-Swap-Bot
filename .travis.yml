@@ -1,0 +1,6 @@
+language: javascript
+node_js:
+  - 15
+  - 14
+  - 13
+  - 12
