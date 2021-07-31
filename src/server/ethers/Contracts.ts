@@ -50,8 +50,8 @@ export class Contracts implements IContracts {
         return await tokenContract.balanceOf(Configuration.WALLET_PUBLIC);
     }
 
-    public async getWBNBPriceInBUSD(): Promise<BigNumber> {
-        const amountIn = parseUnits("1", 'ether');
+    public async getWBNBPriceInBUSD(amount: string = "1"): Promise<BigNumber> {
+        const amountIn = parseUnits(amount, 'ether');
         const amounts = await this._router.getAmountsOut(amountIn, [Configuration.WBNB_CONTRACT, Configuration.TOKENS.BUSD], {
             gasPrice: parseUnits(Configuration.GWEI.toString(), 'gwei'),
             gasLimit: Configuration.GAS_LIMIT
@@ -60,8 +60,8 @@ export class Contracts implements IContracts {
         return amounts[1];
     }
 
-    public async getTokenPriceInWBNB(address: string): Promise<BigNumber> {
-        const amountIn = parseUnits("1", 'ether');
+    public async getTokenPriceInWBNB(address: string, amount: string = "1"): Promise<BigNumber> {
+        const amountIn = parseUnits(amount, 'ether');
         const amounts = await this._router.getAmountsOut(amountIn, [address, Configuration.WBNB_CONTRACT], {
             gasPrice: parseUnits(Configuration.GWEI.toString(), 'gwei'),
             gasLimit: Configuration.GAS_LIMIT
