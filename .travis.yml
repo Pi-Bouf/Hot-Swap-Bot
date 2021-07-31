@@ -4,3 +4,5 @@ node_js:
   - 14
   - 13
   - 12
+install:
+  - cp src/server/conf.ts.example src/server/conf.ts

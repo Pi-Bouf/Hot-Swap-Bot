@@ -1,4 +1,6 @@
 # HotSwapBot
+<center><img src="https://img.shields.io/travis/com/pi-bouf/Hot-Swap-Bot?style=for-the-badge"></center>
+
 HotSwapBot is an automatic swap bot for the BSC _(Binance Smart Chain)_ going through the PancakeSwap's router and factory.
 
 💲 This bot is made to buy a certain number of the token you want from the BNB. If the value of the token goes up, then the high value becomes the 
