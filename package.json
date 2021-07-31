@@ -5,7 +5,7 @@
   "scripts": {
     "client:dev": "parcel src/client/index.html --log-level 4 --no-cache",
     "server:dev": "ts-node-dev --respawn src/app.ts --lib",
-    "tests": "mocha -r ts-node/register 'tests/**/*.ts'"
+    "test": "mocha -r ts-node/register 'tests/**/*.ts'"
   },
   "dependencies": {
     "axios": "^0.21.1",
