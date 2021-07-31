@@ -1,7 +1,8 @@
+import * as chalk from 'chalk';
 import {IContracts} from '../ethers/interface/IContracts';
 import {IOrder} from './interface/IOrder';
 import {IToken} from '../ethers/interface/IToken';
-import {formatEther, formatUnits} from 'ethers/lib/utils';
+import {formatEther} from 'ethers/lib/utils';
 import {BigNumber} from 'ethers';
 
 export class TokenOrder implements IOrder {
@@ -29,8 +30,21 @@ export class TokenOrder implements IOrder {
     }
 
     public async start(): Promise<void> {
-        await this.loadData();
+        if (this.contracts === undefined) {
+            this.logError('can\'t be started ! Please attach contracts interface...');
+            return;
+        }
 
+        try {
+            await this.loadData();
+        } catch (e) {
+            this.logError('Can\'t load data... Error in configuration ? ' + e);
+            return;
+        }
+
+        console.log(chalk.yellow(`[TokenOrder => ${this.token.name}] started ! Refreshing...`));
+
+        this.active = true;
         await this.refresh();
     }
 
@@ -39,14 +53,35 @@ export class TokenOrder implements IOrder {
     }
 
     public async refresh(): Promise<void> {
-        this.refreshBalances();
+        if(!this.active) return;
+
+        try {
+            this.refreshBalances();
+        } catch (e) {
+            this.logError("Error during refresh ! " + e);
+        }
     }
 
     public async refreshBalances() {
-        this.balance = await this.contracts.getTokenBalanceInWallet(this.address);
-        this.balanceInWBNB = await this.contracts.getTokenPriceInWBNB(this.address, "1");
-        this.balanceInBUSD = await this.contracts.getWBNBPriceInBUSD("1");
+        try {
+            this.balance = await this.contracts.getTokenBalanceInWallet(this.address);
+
+            if (this.balance !== BigNumber.from(0)) {
+                this.balanceInWBNB = await this.contracts.getTokenPriceInWBNB(this.address, '1');
+                this.balanceInBUSD = await this.contracts.getWBNBPriceInBUSD('1');
+            } else {
+                console.log("ZOB");
+            }
+        } catch (e) {
+            this.logError("Can't refresh all balances ! " + e);
+        }
 
         console.log(formatEther(this.balance), formatEther(this.balanceInWBNB), formatEther(this.balanceInBUSD));
+    }
+
+
+
+    private logError(error: any) {
+        console.log(chalk.red(`[TokenOrder => ${this.address}] ${error}`));
     }
 }
