@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "client:dev": "parcel src/client/index.html --log-level 4 --no-cache",
-    "server:dev": "ts-node-dev --respawn src/app.ts --lib"
+    "server:dev": "ts-node-dev --respawn src/app.ts --lib",
+    "tests": "mocha -r ts-node/register 'tests/**/*.ts'"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -18,12 +19,17 @@
     "vuex": "^3.6.2"
   },
   "devDependencies": {
+    "@types/chai": "^4.2.21",
     "@types/chalk": "^2.2.0",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.4.8",
+    "@types/sinon": "^10.0.2",
     "@vue/component-compiler-utils": "^3.2.2",
     "chai": "^4.3.4",
     "mocha": "^9.0.3",
     "parcel": "1.12.3",
     "sass": "^1.37.0",
+    "sinon": "^11.1.2",
     "ts-node": "^10.1.0",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.3.5",
