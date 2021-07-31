@@ -29,4 +29,8 @@ describe('TokenOrder tests', function () {
 
         contractsMock.verify();
     });
+
+    it('Get token balance', async function() {
+
+    });
 });

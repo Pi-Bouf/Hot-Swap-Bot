@@ -1,7 +1,8 @@
 # HotSwapBot
-<center><img src="https://img.shields.io/travis/com/pi-bouf/Hot-Swap-Bot?style=for-the-badge"> <img src="https://img.shields.io/github/commit-activity/m/Pi-Bouf/Hot-Swap-Bot?style=for-the-badge"></center>
+<img src="https://img.shields.io/travis/com/pi-bouf/Hot-Swap-Bot?style=for-the-badge">
+<img src="https://img.shields.io/github/commit-activity/m/Pi-Bouf/Hot-Swap-Bot?style=for-the-badge">
+<img src="https://img.shields.io/github/languages/code-size/Pi-Bouf/Hot-Swap-Bot?style=for-the-badge">
 
-<center><img src="https://img.shields.io/github/languages/code-size/Pi-Bouf/Hot-Swap-Bot?style=for-the-badge"></center>
 
 HotSwapBot is an automatic swap bot for the BSC _(Binance Smart Chain)_ going through the PancakeSwap's router and factory.
 
