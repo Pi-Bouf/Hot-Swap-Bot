@@ -6,9 +6,9 @@ export class Account {
     private _wallet: Wallet;
 
     public init() {
-        const provider = new providers.JsonRpcProvider(Configuration.RPC);
+        this._provider = new providers.JsonRpcProvider(Configuration.RPC);
         const wallet = new Wallet(Configuration.WALLET_PRIVATE);
-        this._wallet = wallet.connect(provider);
+        this._wallet = wallet.connect(this._provider);
     }
 
     get wallet(): Wallet {

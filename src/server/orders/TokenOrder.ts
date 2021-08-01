@@ -70,7 +70,7 @@ export class TokenOrder implements IOrder {
                 this.balanceInWBNB = await this.contracts.getTokenPriceInWBNB(this.address, formatUnits(this.balance, this.token.decimals));
                 this.balanceInBUSD = await this.contracts.getWBNBPriceInBUSD(formatEther(this.balanceInWBNB));
 
-                this.logInfo(`No balance for this token... [ ${formatEther(this.balance)} ${this.token.symbol} ] = [${formatEther(this.balanceInWBNB)} WBNB] = [${formatEther(this.balanceInBUSD)} BUSD]`);
+                this.logInfo(`No balance for this token... [ ${formatUnits(this.balance, this.token.decimals)} ${this.token.symbol} ] = [${formatEther(this.balanceInWBNB)} WBNB] = [${formatEther(this.balanceInBUSD)} BUSD]`);
             } else {
                 const balanceInWBNB = await this.contracts.getTokenPriceInWBNB(this.address, "1");
                 const balanceInBUSD = await this.contracts.getWBNBPriceInBUSD(formatEther(balanceInWBNB));

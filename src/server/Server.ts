@@ -7,6 +7,8 @@ import {BigNumber} from 'ethers';
 import {TokenOrder} from './orders/TokenOrder';
 import {IOrder} from './orders/interface/IOrder';
 
+import { get } from "https";
+
 const tokens = {
     CAKE: "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
 }
@@ -57,6 +59,6 @@ export class Server {
     }
 
     private registerOrders() {
-        this._orders.push(new TokenOrder(Configuration.TOKENS.CAKE));
+        this._orders.push(new TokenOrder(Configuration.TOKENS.WINGS));
     }
 }
