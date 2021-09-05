@@ -11,12 +11,7 @@ reference value. Now if the token value goes below the reference value _(5%, con
 
 
 # Documentation
-<img src="https://i.imgur.com/l9cLtJ3.png">
-
-No documentation at this moment, but we have a discord link :)
-
-
-[https://discord.gg/Aax5NUsRhX](https://discord.gg/Aax5NUsRhX)
+No documentation at this moment... :)
 
 # Screenshots
 <center><img src="https://i.imgur.com/2vHYGid.png"></center>
